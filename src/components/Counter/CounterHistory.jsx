@@ -24,7 +24,7 @@ export default function CounterHistory({ history }) {
   return (
     <ol>
       {history.map((count) => (
-        // Key is important.
+        // Key is important helps with state managment and lists.
         <HistoryItem key={count.id} count={count.value} />
       ))}
     </ol>

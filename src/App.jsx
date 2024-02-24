@@ -15,6 +15,8 @@ function App() {
 
   function handleSetCount(newCount) {
     setChosenCount(newCount);
+    // console.log(chosenCount) This wont work.
+    // React does State batching. Batched together for one component function
   }
 
   return (
@@ -22,8 +24,8 @@ function App() {
       <Header />
       <main>
         <ConfigureCounter onSet={handleSetCount} />
-        <Counter initialCount={chosenCount} />
-        {/* STATE is scoped to a component! */}
+        <Counter key={chosenCount} initialCount={chosenCount} />
+        {/* STATE is scoped to a component */}
         {/* <Counter initialCount={chosenCount} /> */}
       </main>
     </>
