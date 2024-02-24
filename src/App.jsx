@@ -23,6 +23,8 @@ function App() {
       <main>
         <ConfigureCounter onSet={handleSetCount} />
         <Counter initialCount={chosenCount} />
+        {/* STATE is scoped to a component! */}
+        {/* <Counter initialCount={chosenCount} /> */}
       </main>
     </>
   );
